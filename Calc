@@ -1,0 +1,69 @@
+#TEST
+student=input("What is your name?")
+#test grades now should be provided
+test_grades=input("Type in your 4 test grades for this semester and seperate each grade by comma:")
+
+test_list=[int(grade) for grade in test_grades.split( ',' )]
+
+testaverage=input("Would you like to see your test grade average? ( Enter Yes or No )")
+
+
+if len(test_list) == 4:
+
+    average_grade=sum(test_list)/len(test_list)
+    
+if testaverage=='Yes':
+    print([average_grade])
+else:
+    print("Ok, proceeding on.")
+
+    
+
+    
+#HOMEWORK
+homework_grades=input(student + ", now enter your grades for the 5 homework assignments you were assigned. Please seperate these each by commas.")
+homework_list=[int(hgrade) for hgrade in homework_grades.split(',')]
+
+if len(homework_list)==5:
+    homework_average=sum(homework_list)/len(homework_list)
+    
+hwaverage=input("Would you like to see your homework average? ( Enter Yes or No )")
+if hwaverage=='Yes':
+    print([homework_average])
+else:
+    print("Ok, proceeding on.")
+    
+#PARTICIPATION!!!!!!!
+participation=input("For the semester, please enter your 8 grades for participation seperated by commas as previously requested.")
+effort_list=[int(pgrade) for pgrade in participation.split(',')]
+
+if len(effort_list)==8:
+    participation_average=sum(effort_list)/len(effort_list)
+    
+effortaverage=input("Would you like to see your test grade average? ( Enter Yes or No )")
+if effortaverage=='Yes':
+    print([participation_average])
+else:
+    print("Ok, proceeding on.")
+    
+a= average_grade * 0.5
+b= homework_average * 0.3
+c= participation_average * 0.2
+
+final = a + b + c 
+    
+total=input("Would you like your current calculated grade for this course? ( Enter Yes or No )")
+if total=='Yes':
+    print([final])
+else:
+    print("Ok, goodbye and good luck to your class!")
+
+
+
+
+    
+    
+
+    
+
+
